@@ -28,6 +28,7 @@ class RotationGame {
         }
         //reverse
         reverse(arr);
+        //print
         printArray(arr);
         sc.close();        
     }

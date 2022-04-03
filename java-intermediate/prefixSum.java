@@ -11,9 +11,13 @@ public class prefixSum {
     }
 
 
-    public static int pfSum(int[] A, int startIndex, int endIndex) {
-        int sum = A[endIndex] - A[startIndex - 1];
-        return sum;
+    public static void pfSum(int[] A, int startIndex, int endIndex) {
+        int[] prefixSumArr = prefixSumArray(A);
+        System.out.println("Prefix Sum Array :");
+        printArray(prefixSumArr);
+        int sum = prefixSumArr[endIndex] - prefixSumArr[startIndex - 1];
+        System.out.println("Sum Of all Elements from " + startIndex + " to " + endIndex);
+        System.out.println(sum);
     }
 
     public static int[] prefixSumArray(int[] A) {
@@ -32,11 +36,9 @@ public class prefixSum {
         for(int a = 0; a<arrLen; a++){
             arr[a] = sc.nextInt();
         }
-        int[] prefixSumArr = prefixSumArray(arr);
-        System.out.println("Prefix Sum Array :");
-        printArray(prefixSumArr);
-        System.out.println("Sum Of all Elements from " + 2 + "to" + 5);
-        System.out.println(pfSum(prefixSumArr,2,5));
+        int startIndex = sc.nextInt();
+        int endIndex = sc.nextInt();
+        pfSum(arr,startIndex,endIndex);
         sc.close();
     }
 }

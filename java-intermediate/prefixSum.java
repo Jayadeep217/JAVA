@@ -10,6 +10,12 @@ public class prefixSum {
         System.out.println();
     }
 
+
+    public static int pfSum(int[] A, int startIndex, int endIndex) {
+        int sum = A[endIndex] - A[startIndex - 1];
+        return sum;
+    }
+
     public static int[] prefixSumArray(int[] A) {
         int[] psArr = new int[A.length];
         psArr[0] = A[0];
@@ -27,7 +33,10 @@ public class prefixSum {
             arr[a] = sc.nextInt();
         }
         int[] prefixSumArr = prefixSumArray(arr);
+        System.out.println("Prefix Sum Array :");
         printArray(prefixSumArr);
+        System.out.println("Sum Of all Elements from " + 2 + "to" + 5);
+        System.out.println(pfSum(prefixSumArr,2,5));
         sc.close();
     }
 }

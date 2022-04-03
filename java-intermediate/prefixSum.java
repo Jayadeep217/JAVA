@@ -10,7 +10,7 @@ public class prefixSum {
         System.out.println();
     }
 
-    public static int[] pfSum(int[] A) {
+    public static int[] prefixSumArray(int[] A) {
         int[] psArr = new int[A.length];
         psArr[0] = A[0];
         for(int p=1; p<A.length; p++){
@@ -26,7 +26,7 @@ public class prefixSum {
         for(int a = 0; a<arrLen; a++){
             arr[a] = sc.nextInt();
         }
-        int[] prefixSumArr = pfSum(arr);
+        int[] prefixSumArr = prefixSumArray(arr);
         printArray(prefixSumArr);
         sc.close();
     }

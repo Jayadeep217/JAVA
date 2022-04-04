@@ -10,7 +10,7 @@ public class problem {
         System.out.println();
     }
 
-    public static void prefixSumArray(int[] A) {
+    public static void solve(int[] A) {
         int[] psArrE = new int[A.length];
         int[] psArrO = new int[A.length];
         psArrE[0] = A[0];
@@ -39,7 +39,7 @@ public class problem {
         for(int a = 0; a<arrLen; a++){
             arr[a] = sc.nextInt();
         }
-        prefixSumArray(arr);
+        solve(arr);
         sc.close();
     }
 }

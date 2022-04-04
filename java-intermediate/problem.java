@@ -10,26 +10,43 @@ public class problem {
         System.out.println();
     }
 
-    public static void solve(int[] A) {
-        int[] psArrE = new int[A.length];
-        int[] psArrO = new int[A.length];
-        psArrE[0] = A[0];
-        for(int p=1; p<A.length; p++){
-            if(p%2==0){
-                psArrE[p] = psArrE[p-1] + A[p];
+    public static int solve(int[] A) {
+        int N = A.length;
+        int[] psOdd  = new int[N];
+        int[] psEven = new int[N];
+        int count = 0, sumEven = 0, sumOdd  = 0;
+        psEven[0] = A[0];
+        for(int i = 1; i < N; i++){
+            if(i%2==0){
+                psEven[i] = psEven[i-1] + A[i]; 
             }
             else{
-                psArrE[p] = psArrE[p-1];
+                psEven[i] = psEven[i-1];
             }
-            if(p%2==1){
-                psArrO[p] = psArrO[p-1] + A[p];
+            if(i%2==1){
+                psOdd[i] = psOdd[i-1] + A[i]; 
             }
             else{
-                psArrO[p] = psArrO[p-1];
+                psOdd[i] = psOdd[i-1];
             }
         }
-        printArray(psArrE);
-        printArray(psArrO);
+        for(int i = 0; i < N; i++){
+            if(i==0){
+                sumEven = psOdd[N-1] - psOdd[i];
+                sumOdd  = psEven[N-1] - psEven[i];
+                if(sumEven == sumOdd){
+                    count++;
+                }
+            }
+            else{
+                sumEven = psEven[i-1] + psOdd[N-1] - psOdd[i];
+                sumOdd  = psOdd[i-1] + psEven[N-1] - psEven[i];
+                if(sumEven == sumOdd){
+                    count++;
+                }
+            }
+        }
+        return count;
     }
 
     public static void main(String[] args) {
@@ -39,7 +56,7 @@ public class problem {
         for(int a = 0; a<arrLen; a++){
             arr[a] = sc.nextInt();
         }
-        solve(arr);
+        System.out.println(solve(arr));;
         sc.close();
     }
 }

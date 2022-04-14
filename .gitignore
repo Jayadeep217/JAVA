@@ -1,3 +1,4 @@
 .vscode/
-*.java
+temp.java
+tempArray.java
 *.pdf

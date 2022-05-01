@@ -9,6 +9,7 @@ class RotationGame {
         }
         System.out.println();
     }
+    
     public static void reverse(int[] A, int startIndex, int endIndex) {
         int i = startIndex;
         int j = endIndex;

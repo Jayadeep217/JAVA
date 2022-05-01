@@ -24,16 +24,28 @@ class reverseArray {
         System.out.println("Count : " + count);
     }
     
+    // public static void reverseW(int[] A) {
+    //     System.out.println("***********ONE LOOP*********");
+    //     int i = 0, count1 = 0;
+    //     int j = A.length-1;
+    //     while(i<j){
+    //         int temp = A[i];
+    //         A[i] = A[j];
+    //         A[j] = temp;
+    //         i++;
+    //         j--;
+    //         count1++;
+    //     }
+    //     System.out.println("Count : " + count1);
+    // }
+
     public static void reverseW(int[] A) {
         System.out.println("***********ONE LOOP*********");
-        int i = 0, count1 = 0;
-        int j = A.length-1;
-        while(i<j){
-            int temp = A[i];
-            A[i] = A[j];
-            A[j] = temp;
-            i++;
-            j--;
+        int count1 = 0;
+        for(int i = 0,j = A.length-1;i<j;i++,j--){
+            A[i] = A[i] + A[j]; 
+            A[j] = A[i] - A[j];
+            A[i] = A[i] - A[j];
             count1++;
         }
         System.out.println("Count : " + count1);

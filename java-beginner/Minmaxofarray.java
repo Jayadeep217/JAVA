@@ -18,10 +18,12 @@ public class Minmaxofarray {
             {
                 min = arr[j];
             }
+            //min = Math.min(min, arr[j]);
             if (max < arr[j])
             {
                 max = arr[j];
             }
+            //max = Math.max(max, arr[j]);
         }
         System.out.println(max + " " + min);
         sc.close();

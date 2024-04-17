@@ -3,3 +3,5 @@ temp.java
 tempArray.java
 *.pdf
 test.java
+*.iml
+.idea

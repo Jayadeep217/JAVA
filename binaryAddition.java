@@ -5,12 +5,12 @@ import java.util.Scanner;
 public class binaryAddition {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter two binary numbers to add! \nFirst number: ");
+        System.out.print("Enter two binary numbers to add! \nFirst number: ");
         String firstBinary = sc.nextLine();
         System.out.println("Decimal of "+ firstBinary + " is " + Integer.parseInt(firstBinary, 2));
-        System.out.println("Second number: ");
+        System.out.print("Second number: ");
         String secondBinary = sc.nextLine();
-        System.out.println("Decimal "+ secondBinary + " is " + Integer.parseInt(secondBinary, 2));
+        System.out.println("Decimal of "+ secondBinary + " is " + Integer.parseInt(secondBinary, 2));
         int decimalSum = Integer.parseInt(firstBinary, 2) + Integer.parseInt(secondBinary, 2);        
         String binarySum = Integer.toBinaryString(decimalSum);
         System.out.println("Binary Sum is " + binarySum + " and Decimal Sum is " + decimalSum);

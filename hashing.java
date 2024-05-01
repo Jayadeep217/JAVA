@@ -1,9 +1,6 @@
-import java.util.HashMap;
-import java.util.HashSet;
-
+import java.util.*;
 public class hashing {
     //hashing basics
-
     public static void hashmap() {
         HashMap<Integer, String> hm = new HashMap<>();
         //Add key value pairs
@@ -11,6 +8,8 @@ public class hashing {
         hm.put(2, "Two");
         hm.put(3, "Three");
         hm.put(4, "Four");
+        //clone a hashmap
+        HashMap<Integer, String> hm2 = new HashMap<>(hm);
         //update a key value pair
         hm.put(1, "Three");
         //prints full hashmap
@@ -23,8 +22,9 @@ public class hashing {
         System.out.println("Checking if 2nd key exists : " + hm.containsKey(2));
         //get value of a key
         System.out.println("Get value of a 1st key : " + hm.get(1));
-        //prints final hashmap
-        System.out.println("Final Hashmap after ops : " + hm.toString());        
+        //prints final hashmap after certain operations
+        System.out.println("Final Hashmap after ops : " + hm.toString());
+        System.out.println("Cloned HashMap : " + hm2.toString());
     }
 
     public static void hashset() {
@@ -38,6 +38,8 @@ public class hashing {
         hs.add("One");        
         //prints full hashset
         System.out.println("Full HashSet : " + hs.toString());
+        //clone a hashset
+        HashSet<String> hm2 = new HashSet<>(hs);
         //remove a key pair
         System.out.println("Removing 2nd key pair : " + hs.remove("Two"));
         //hashmap size
@@ -52,11 +54,12 @@ public class hashing {
             count++;
         }
         //prints final hashset
-        System.out.println("Final HashSet after ops : " + hs.toString());        
+        System.out.println("Final HashSet after ops : " + hs.toString());
+        System.out.println("Cloned HashSet : " + hm2.toString());
     }
 
     public static void main(String[] args) {
-        // hashmap();
+        hashmap();
         hashset();
     }
 }

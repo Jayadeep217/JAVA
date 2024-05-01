@@ -46,8 +46,10 @@ public class hashing {
         System.out.println("Checking if 2nd key exists : " + hs.contains("2"));
         System.out.println("Checking if 2nd key exists : " + hs.contains("One"));
         //Access Elements/Keys
+        int count = 0;
         for (String string : hs) {
-            System.out.println("Element : " + string);
+            System.out.println("Element "+ count +" : " + string);
+            count++;
         }
         //prints final hashset
         System.out.println("Final HashSet after ops : " + hs.toString());        

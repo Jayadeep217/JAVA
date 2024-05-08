@@ -10,6 +10,7 @@ public class hashing {
         hm.put(4, "Four");
         //clone a hashmap
         HashMap<Integer, String> hm2 = new HashMap<>(hm);
+        System.out.println(hm2.keySet());
         //update a key value pair
         hm.put(1, "Three");
         //prints full hashmap
